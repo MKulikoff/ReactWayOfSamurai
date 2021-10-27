@@ -1,0 +1,22 @@
+.nav {
+    background-color: white; 
+    grid-area: nav; 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-shadow: var(--box_shadow);
+    font-weight: var(--medium_font);
+  }
+  
+  .nav a {
+    padding: 0.5rem 1rem;
+  }
+  
+  .nav a:hover {
+    background-color: var(--main_color); 
+    cursor: pointer;
+  }
+
+  .profileActive {
+    background-color: var(--main_color); 
+  }
