@@ -9,23 +9,24 @@ import News from './components/News/News';
 import Music from './components/Music/Music';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-function App() {
+function App(props) {
+ 
   return (
     <BrowserRouter>
       <div className="container">
         <Header />
         <Navbar />
         <div className="content">
-          <Route path='/profile'>
-            <Profile />
+          <Route exact path='/profile'>
+            <Profile posts={props.store.postData}/>
           </Route>
-          <Route path='/dialogs'>
-            <Dialogs />
+          <Route exact path='/dialogs'>
+            <Dialogs dialogs={props.store.dialogsData}/>
           </Route>
-          <Route path='/news'>
+          <Route exact path='/news'>
             <News />
           </Route>
-          <Route path='/music'>
+          <Route exact path='/music'>
             <Music />
           </Route>
           

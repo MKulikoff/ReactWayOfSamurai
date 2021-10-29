@@ -1,15 +1,9 @@
 import styles from './Profile.module.css';
 import Post from './MyPosts/Post/Post'
 
-const postData = [
-    {message: 'Hello everyone'}, 
-    {message: 'This is my second post'}, 
-    {message: 'Forever young'}, 
-    {message: 'It is nice day'}
-]
 
 function Profile(props) {
-    const posts = postData.map((post) => <Post message={post.message}/>)
+    const posts = props.posts.map((post) => <Post message={post.message}/>)
     return (
         <div className={styles.profile}>
             <div className={styles.person}>
